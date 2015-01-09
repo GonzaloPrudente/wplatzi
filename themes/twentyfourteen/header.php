@@ -40,8 +40,6 @@
 	</div>
 	<?php endif; ?>
 
-	<p>Hola Mundo de Wordpress + Git + GitHub</p>
-
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-main">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -62,6 +60,8 @@
 				<?php get_search_form(); ?>
 			</div>
 		</div>
+
+		<p>Hola Mundo de Wordpress + Git + GitHub</p>
 	</header><!-- #masthead -->
 
 	<div id="main" class="site-main">
