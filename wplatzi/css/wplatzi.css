@@ -1,0 +1,104 @@
+a {
+	text-decoration: none;
+}
+
+header {
+	background-color: #000;
+}
+	.logo {
+		margin: .8em 0;
+	}
+	.menu ul {
+		list-style: none;
+		overflow: hidden;
+		padding: 0px;
+	}
+		ul.menu li a {
+			color: #fff;
+		}
+
+.postList {
+	background-color: #fffeee;
+}
+	.postList-title {
+		font-size: 1.6em
+	}
+		.postList-title a {
+			color: #000;
+		}
+	.postlist-thumbnail {
+		margin: 0px;
+	}
+
+.singlePost {
+	background-color: #fffeee;
+}
+	.singlePost-title {
+		font-size: 1.6em
+	}
+	.singlePost-image {
+		margin: 0px;
+	}
+		.singlePost-image img {
+			height: auto;
+			max-width: 100%;
+			width: 100%;
+		}
+	.singlePost-content {
+		margin-bottom: 2em;
+	}
+	.singlePost-info {
+		background-color: #eeeeee;
+		border-radius: 15px;
+		margin-bottom: 1em;
+		padding: 1em;
+	}
+
+.pagePost {
+	background-color: #fffeee;
+}
+	.pagePost-title {
+		font-size: 1.6em
+	}
+	.pagePost-image {
+		margin: 0px;
+	}
+		.pagePost-image img {
+			height: auto;
+			max-width: 100%;
+			width: 100%;
+		}
+	.pagePost-content {
+		margin-bottom: 2em;
+	}
+	.pagePost-info {
+		background-color: #eeeeee;
+		border-radius: 15px;
+		margin-bottom: 1em;
+		padding: 1em;
+	}
+
+.author-avatar,
+.author-info {
+	display: inline-block;
+	height: 150px;
+	vertical-align: top;
+}
+.author-avatar img {
+	border-radius: 50%;
+}
+.author-name {
+	font-size: 1.5em;
+}
+.post-date {
+	font-size: .8em;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+}
+	footer .copy {
+		margin: 1em 0;
+		text-align: right;
+	}
