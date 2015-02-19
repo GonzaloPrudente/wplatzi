@@ -46,10 +46,6 @@
 	<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.png" id="image_src" />
 
 	<?php endif; ?>
-
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-	<![endif]-->
 	<?php wp_head(); ?>
 </head>
 
