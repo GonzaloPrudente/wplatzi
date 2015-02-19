@@ -25,6 +25,7 @@ add_action( 'after_setup_theme', 'wplatzi_init' );
  */
 function wplatzi_scripts() {
 	// Load our main CSS with theme data.
+	// wp_enqueue_style( $name, $path/to/file.css, $dependencies, $version );
 	wp_enqueue_style( 'wplatzi-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'wplatzi-normalize', get_template_directory_uri() . '/css/normalize.css', array( 'wplatzi-style' ), '' );
 	wp_enqueue_style( 'wplatzi-foundation', get_template_directory_uri() . '/css/foundation.css', array( 'wplatzi-style' ), '' );
@@ -36,6 +37,7 @@ function wplatzi_scripts() {
 	}
 
 	// Load JS
+	// wp_enqueue_script( $name, $path/to/file.css, $dependencies, $version, $where );
 	// Last param: true load in wp_head(), if false load in wp_footer()
 	wp_enqueue_script( 'wplatzi-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '1.0.0', true );
 }
