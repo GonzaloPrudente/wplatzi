@@ -42,8 +42,8 @@
 	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
 	<meta property="og:description" content="Blog WPlatzi, hecho solo para la clase BONUS de la Comunidad Platzi." />
 	<meta property="og:type" content="blog" />
-	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.jpg" />
-	<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.jpg" id="image_src" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/wplatzi-shareFB.jpg" />
+	<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/images/wplatzi-shareFB.jpg" id="image_src" />
 
 	<?php endif; ?>
 	<?php wp_head(); ?>
