@@ -41,13 +41,11 @@ function wplatzi_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wplatzi_scripts' );
 
+
+/**
+ * Change the markup of wp_title().
+ */
 function wplatzi_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() ) {
-		return $title;
-	}
-
 	// Add the site name.
 	$title .= get_bloginfo( 'name', 'display' );
 

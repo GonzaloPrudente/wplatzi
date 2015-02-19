@@ -5,8 +5,13 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<?php 
+		// Obtener la primera parte del contenido
 		$content = get_post_field( 'post_content', $post->ID );
+		// Nos devuelve un array
+		// [main] => Muestra el contenido antes del "more tag"
+		// [extended] => Muestra el contenido después del "more tag"
 		$content_parts = get_extended( $content );
+		// echo wp_strip_all_tags( $content_parts['main'] );
 
 		// wp_get_attachment_image_src( $attachment_id, $size, $icon )
 		// Nos devuelve un array
@@ -20,8 +25,8 @@
 	
 	<meta property="og:site_name" content="<?php the_title(); ?>" />
 	<meta property="og:locale" content="es_ES" />
-	<meta property="og:url" content="<?php the_permalink() ?>"/>
-	<meta property="og:description" content="<?php echo wp_strip_all_tags($content_parts['main']); ?>" />
+	<meta property="og:url" content="<?php the_permalink(); ?>"/>
+	<meta property="og:description" content="<?php the_excerpt(); ?>" />
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="<?php echo $image[0]; ?>" />
 	<link rel="image_src" href="<?php echo $image[0]; ?>" id="image_src" />
