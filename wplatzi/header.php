@@ -27,7 +27,7 @@
 	?>
 	<?php if (is_singular()) : ?>
 	
-	<meta property="og:site_name" content="<?php the_title(); ?>" />
+	<meta property="og:title" content="<?php the_title(); ?>" />
 	<meta property="og:locale" content="es_ES" />
 	<meta property="og:url" content="<?php the_permalink(); ?>"/>
 	<meta property="og:description" content="<?php the_excerpt(); ?>" />
@@ -37,13 +37,13 @@
 	
 	<?php else : ?>
 
-	<meta property="og:site_name" content="<?php wp_title( '|', true, 'right' ); ?>" />
+	<meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>" />
 	<meta property="og:locale" content="es_ES" />
 	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
 	<meta property="og:description" content="Blog WPlatzi, hecho solo para la clase BONUS de la Comunidad Platzi." />
 	<meta property="og:type" content="blog" />
-	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.png" />
-	<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.png" id="image_src" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.jpg" />
+	<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.jpg" id="image_src" />
 
 	<?php endif; ?>
 	<?php wp_head(); ?>
