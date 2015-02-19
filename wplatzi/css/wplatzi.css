@@ -10,6 +10,7 @@ header {
 	}
 	.menu ul {
 		list-style: none;
+		margin: 1.5em 0;
 		overflow: hidden;
 		padding: 0px;
 	}
@@ -99,6 +100,6 @@ footer {
 	color: #fff;
 }
 	footer .copy {
-		margin: 1em 0;
+		margin: 1.5em 0;
 		text-align: right;
 	}

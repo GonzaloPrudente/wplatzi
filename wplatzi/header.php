@@ -35,11 +35,11 @@
 
 	<meta property="og:site_name" content="<?php wp_title( '|', true, 'right' ); ?>" />
 	<meta property="og:locale" content="es_ES" />
-	<meta property="og:url" content="<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>" />
-	<meta property="og:description" content="Blog de patinaje donde encontrarás las útlimas noticias, eventos, reviews y todo el contenido sobre patinaje en un solo lugar." />
+	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
+	<meta property="og:description" content="Blog WPlatzi, hecho solo para la clase BONUS de la Comunidad Platzi." />
 	<meta property="og:type" content="blog" />
-	<meta property="og:image" content="http://maspormenos.com.pe/pichangatottus/wp-content/themes/tottus/images/bg-widescreen.png" />
-	<link rel="image_src" href="http://maspormenos.com.pe/pichangatottus/wp-content/themes/tottus/images/bg-widescreen.png" id="image_src" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.png" />
+	<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/images/wplatzi_shareFB.png" id="image_src" />
 
 	<?php endif; ?>
 
