@@ -1,9 +1,6 @@
 <?php 
 
-if ( ! function_exists( 'wplatzi_init' ) ) :
-
-function wplatzi_init() {
-
+function wplatzi_init(){
 	// Activate post thumbnails with two sizes.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 672, 372, true );
@@ -15,34 +12,20 @@ function wplatzi_init() {
 		'top_menu'    => 'Top menu',
 		'footer_menu' => 'Footer menu'
 	) );
-
 }
-endif;
 add_action( 'after_setup_theme', 'wplatzi_init' );
 
-/**
- * Add some scripts and styles - front end.
- */
-function wplatzi_scripts() {
-	// Load our main CSS with theme data.
-	// wp_enqueue_style( $name, $path/to/file.css, $dependencies, $version );
+function wplatzi_scripts(){
+	// Load CSS to front-end
 	wp_enqueue_style( 'wplatzi-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'wplatzi-normalize', get_template_directory_uri() . '/css/normalize.css', array( 'wplatzi-style' ), '' );
-	wp_enqueue_style( 'wplatzi-foundation', get_template_directory_uri() . '/css/foundation.css', array( 'wplatzi-style' ), '' );
-	wp_enqueue_style( 'wplatzi-base', get_template_directory_uri() . '/css/wplatzi.css', array( 'wplatzi-style' ), '' );
+	wp_enqueue_style( 'wplatzi-css-normalize', get_template_directory_uri() . '/css/normalize.css', array( 'wplatzi-style' ) );
+	wp_enqueue_style( 'wplatzi-css-foundation', get_template_directory_uri() . '/css/foundation.css', array( 'wplatzi-style' ) );
+	wp_enqueue_style( 'wplatzi-css-base', get_template_directory_uri() . '/css/wplatzi.css', array( 'wplatzi-style' ) );
 
-	// Load CSS & JS to single and page
-	if ( is_singular() ) {
-		
-	}
-
-	// Load JS
-	// wp_enqueue_script( $name, $path/to/file.css, $dependencies, $version, $where );
-	// Last param: true load in wp_head(), if false load in wp_footer()
-	wp_enqueue_script( 'wplatzi-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '1.0.0', true );
+	// Load JS to front-end
+	wp_enqueue_script( 'wplatzi-js-base', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'wplatzi_scripts' );
-
 
 /**
  * Change the markup of wp_title().
@@ -59,4 +42,4 @@ function wplatzi_wp_title( $title, $sep ) {
 
 	return $title;
 }
-add_filter( 'wp_title', 'wplatzi_wp_title', 10, 2 );
+add_action( 'wp_title', 'wplatzi_wp_title', 10, 2 );

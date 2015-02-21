@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-	
 	<section class="singlePost row">
 		<div class="small-12 medium-12 large-12 columns">
 			<?php while ( have_posts() ) : the_post(); ?>
