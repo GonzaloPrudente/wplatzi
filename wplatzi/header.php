@@ -23,7 +23,7 @@
 		// [extended] => After more tag
 	?>
 	
-	<?php if ( is_single() ) : ?>
+	<?php if ( is_singular() ) : ?>
 	<meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>" />
 	<meta property="og:locale" content="es_ES" />
 	<meta property="og:url" content="<?php the_permalink(); ?>"/>
